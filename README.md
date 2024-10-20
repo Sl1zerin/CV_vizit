@@ -1,2 +1,2 @@
 # CV_vizit
-  Personal business card
+  My personal business card
