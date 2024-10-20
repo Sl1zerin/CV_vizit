@@ -29,7 +29,6 @@ h1, h2 {
     display: flex;
     justify-content: right;
     margin-right: 10px;
-    opacity: 0;
     animation: showMain 2s forwards 2s;
 }
 
