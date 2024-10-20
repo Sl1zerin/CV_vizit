@@ -4,8 +4,10 @@ h1 {
 }
 
 h2 {
-    padding-right: 330px;
+    padding-right: 285px;
     font-size: 20px;
+    font-family: Helvetica;
+    letter-spacing: 2px;
 }
 
 h1, h2 {
@@ -17,8 +19,19 @@ h1, h2 {
 
 .h_about_me {
     padding-left: 30px;
+    font-size: 20px;
     color: white;
-    font-family: sans-serif;
+    font-family: Helvetica;
+    letter-spacing: 2px;
+}
+
+.h_Technical_spels_me {
+    padding-left: 30px;
+    padding-top: 20px;
+    font-size: 20px;
+    color: white;
+    font-family: Helvetica;
+    letter-spacing: 2px;
 }
 
 hr {
@@ -28,14 +41,14 @@ hr {
 footer {
     background-color: #011936;
     text-align: right;
-    margin: 10px auto;
-    position: relative;
+    margin: 0 auto;
     width: 75%;
     border: 0;
     line-height: 1.5;
     text-shadow: 0px 1px 1px black;
     box-shadow: 
     4px 15px 20px rgba(0, 0, 0, 1);
+    
 }
 
 header {
@@ -61,14 +74,37 @@ a:hover {
 
 .p_flooter_text_color {   /*  Изминение цвета такста в нижнем колонтитуле */
     color: white;
+    margin: 0;
 }
 
 .avatar_style {
-    float: left;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 50px;
-    margin-bottom: 40px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    top: 0;
+}
+
+.image_contackts_container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    
+    padding-left: 25px;
+    margin-top: 10px;
+}
+
+.image_contacts {
+    padding-top: 5px;
+    padding-right: 10px;
+}
+
+.text {
+    margin: 0;
+    padding-top: 5px;
+    font-size: 16px;
+    font-family: Helvetica;
+    letter-spacing: 2px;
+    color: white;
 }
 
 .container {
@@ -76,21 +112,46 @@ a:hover {
     background: transparent;
     padding-left: 237px;
     width: 75%;
-    height: 150%;
+    margin: 0;
+
 }
 
 .left-box {
     width: 370px; 
-    background-color: #011936; 
+    background-color: #080808; 
     top: 0px;
     z-index: 1000;
     position: sticky;
     position: -webkit-sticky; 
-    height: 870px; 
+    height: 908px; 
+    margin: 0;
 }
 
 .right-box {
     flex: 1;
-    height: 1400px;
+    height: 1420px;
+    margin: 0;
     background-color: white;
+}
+
+figcaption {
+    margin-top: 10px; /* Отступ сверху для подписи */
+    font-size: 16px; /* Размер шрифта */
+    color: white; /* Цвет текста */
+    text-align: center;
+    font-family: Helvetica;
+    letter-spacing: 2px;
+}
+
+.image_conteiner_figure {
+    margin: 5px;
+    text-align: center;
+    flex-basis: 45%;
+}
+
+.image-gallery {
+    display: flex; /* Используем Flexbox для двух колонок */
+    flex-wrap: wrap; /* Переносим элементы на новую строку */
+    justify-content: center; /* Центрируем элементы */
+    max-width: 600px; /* Максимальная ширина галереи */
 }
