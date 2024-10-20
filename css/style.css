@@ -29,8 +29,8 @@ h1, h2 {
     display: flex;
     justify-content: right;
     margin-right: 10px;
-    
-
+    opacity: 0;
+    animation: showMain 2s forwards 2s;
 }
 
 .h_about_me {
@@ -88,7 +88,7 @@ header {
 }
 
 
-main, footer {
+main, footer, .header_menu {
     opacity: 0;
     transition: opacity 2s ease;
 }
