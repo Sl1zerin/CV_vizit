@@ -1,3 +1,4 @@
+
 h1 {
     padding-top: 130px;
     font-size: 80px;
@@ -10,11 +11,26 @@ h2 {
     letter-spacing: 2px;
 }
 
+h3 {
+    text-align: right;
+    padding-top: 30px;
+    padding-right: 10px;
+    font-size: 13px; 
+}
+
 h1, h2 {
     padding-left: 10px;
     line-height: 0;
     font-family: sans-serif;
     text-align: center;
+}
+
+.header_menu {
+    display: flex;
+    justify-content: right;
+    margin-right: 10px;
+    
+
 }
 
 .h_about_me {
@@ -39,9 +55,12 @@ hr {
     margin: 10px;
 }
 
+.hidden {
+    opacity: 0;
+}
+
 footer {
     background-color: #080808;
-    text-align: right;
     margin-left: 237px;
     width: 75%;
     border: 0;
@@ -64,6 +83,22 @@ header {
     box-shadow: 
     inset 100px -125px 100px #080808,
     -50px 40px 100px #080808;
+    transform: translateY(100%);
+    animation: fadeIn 1s forwards, moveUp 2s forwards 1s;
+}
+
+
+main, footer {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+main {
+    animation: showMain 2s forwards 2s;
+}
+
+footer {
+    animation: showFooter 2s forwards 2.5s; 
 }
 
 a {
@@ -71,12 +106,18 @@ a {
 }
 
 a:hover {
-    color: #BF5700;
+    color: rgb(92, 98, 110);
 }
 
-.p_flooter_text_color {   /*  Изминение цвета такста в нижнем колонтитуле */
+.p_flooter_text_conteiner { 
+    display: flex;
+    justify-content: space-between;
     color: white;
-    margin: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: Helvetica;
+    letter-spacing: 2px;
+    font-size: 14px;
 }
 
 .avatar_style {
@@ -139,9 +180,9 @@ a:hover {
 }
 
 figcaption {
-    margin-top: 10px; /* Отступ сверху для подписи */
-    font-size: 16px; /* Размер шрифта */
-    color: white; /* Цвет текста */
+    margin-top: 10px; 
+    font-size: 16px;
+    color: white; 
     text-align: center;
     font-family: Helvetica;
     letter-spacing: 2px;
@@ -154,8 +195,87 @@ figcaption {
 }
 
 .image-gallery {
-    display: flex; /* Используем Flexbox для двух колонок */
-    flex-wrap: wrap; /* Переносим элементы на новую строку */
-    justify-content: center; /* Центрируем элементы */
-    max-width: 600px; /* Максимальная ширина галереи */
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center; 
+    max-width: 600px;
+}
+
+.P_TEXT_RIGHT_ZAGLAV {
+    color: black;
+    font-family: Helvetica;
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+.P_TEXT_RIGHT {
+    color: black;
+    font-family: Helvetica;
+    letter-spacing: 2px;
+    font-size: 20px;
+    
+}
+.P_RIGHT_ul {
+    padding-bottom: 0;
+    margin: 0;
+    line-height: 0.5;
+    padding-left: 50px;
+    list-style-type: disc;
+    font-family: Helvetica;
+    font-size: 18px;
+}
+
+.P_TEXT_RIGHT_OPISANIE {
+    text-indent: 50px;
+    text-align: justify;
+    padding-right: 30px;
+    color: black;
+    font-family: Helvetica;
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+.obo_mne_container {
+
+    display: grid;
+    background-color: rgba(92, 98, 110, 0.2);
+    margin-top: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes showMain {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes showFooter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
