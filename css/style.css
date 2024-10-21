@@ -25,10 +25,12 @@ h1, h2 {
     text-align: center;
 }
 
-.header_menu {
+nav ul{
+    list-style-type: none;
     display: flex;
+    font-family: Helvetica;
     justify-content: right;
-    margin-right: 10px;
+    opacity: 0;
     animation: showMain 2s forwards 2s;
 }
 
@@ -102,6 +104,7 @@ footer {
 
 a {
     color: white;
+    text-decoration: none;
 }
 
 a:hover {
