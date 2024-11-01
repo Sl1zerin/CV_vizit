@@ -214,7 +214,54 @@
                         <li>
                             <p>Adobe Photoshop</p>
                         </li>  
-                    </ul>   
+                    </ul>  
+
+                    <p class="P_TEXT_RIGHT_ZAGLAV">
+                        <br><b>MY PERSONAL CODE IS WRITTEN IN PYTHON</b>
+                    </p>
+                    <div class="code-container">
+                    <div class="line-numbers"></div>
+                    <pre id="code-block">
+                        <code>
+from PyQt5 import *
+from PyQt5.QtCore import *
+from PyQt5.QtWidgets import *
+import sys
+
+class Window(QMainWindow):
+    def __init__(self, parent=None):
+        super(Window,self).__init__(parent=None)
+        
+        self.setFixedSize(600,600)
+        self.setWindowTitle("Hello Word")
+        
+        self.conteiner = QWidget(self)
+        self.setCentralWidget(self.conteiner)
+        
+        self.Vbox = QVBoxLayout(self)
+        self.Vbox.setContentsMargins(2,2,2,2)
+        self.Vbox.setAlignment(Qt.AlignCenter)
+        
+        self.button = QPushButton(self)
+        self.button.setText("Push me")
+        self.button.clicked.connect(self.button_clicked)
+        self.button.setStyleSheet("QPushButton {font-size: 18pt;}")
+        self.Vbox.addWidget(self.button)
+        
+        self.conteiner.setLayout(self.Vbox)
+        self.show()
+
+    def button_clicked(self):
+        self.button.setText("Your is Good human")
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv) 
+    window = Window() 
+    window.show()  
+    sys.exit(app.exec_())                              
+                        </code>
+                    </pre>
+                    </div>
                 </div>
               </div>
 
@@ -231,5 +278,19 @@
                 </p>
             </div>
         </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const codeBlock = document.getElementById('code-block');
+                const lines = codeBlock.innerText.split('\n');
+                const lineNumbersDiv = document.querySelector('.line-numbers');
+                let lineNumbers = '';
+    
+                lines.forEach((_, index) => {
+                    lineNumbers += (index + 1) + '<br>';
+                });
+    
+                lineNumbersDiv.innerHTML = lineNumbers;
+            });
+        </script>
     </body>
 </html>

@@ -249,6 +249,50 @@ figcaption {
     margin-top: 0;
 }
 
+.code-container {
+    display: flex; 
+    position: relative;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-left: 4px solid orange;
+    background-color: rgb(221, 221, 221);
+    max-width: 96%;
+    max-height: 300px;
+    overflow: auto;
+    
+}
+
+.line-numbers {
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: right;
+    color: black; 
+    font-family: monospace;
+    user-select: none; 
+}
+
+pre {
+    margin: 0;
+    font-family: monospace;
+    white-space: pre; 
+    border-left: 2px solid black;
+    height: max-content;
+    max-width: 90%;
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+pre::before {
+    content: attr(data-line-numbers);
+    position: absolute; 
+    left: 10px; 
+    width: 30px; 
+    text-align: left; 
+    color: gray;
+    font-weight: bold;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
